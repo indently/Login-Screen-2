@@ -21,6 +21,7 @@
 		7A5023BC27DB840C002D261A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A5023BF27DB840C002D261A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A5023C627DB842F002D261A /* Content-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content-ViewModel.swift"; sourceTree = "<group>"; };
+		7AE7D79127DBBF2A00EC7277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		7A5023B727DB840A002D261A /* LoginScreen2 */ = {
 			isa = PBXGroup;
 			children = (
+				7AE7D79127DBBF2A00EC7277 /* Info.plist */,
 				7A5023B827DB840A002D261A /* LoginScreen2App.swift */,
 				7A5023BA27DB840A002D261A /* ContentView.swift */,
 				7A5023C627DB842F002D261A /* Content-ViewModel.swift */,
@@ -275,6 +277,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LoginScreen2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoginScreen2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +306,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LoginScreen2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoginScreen2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

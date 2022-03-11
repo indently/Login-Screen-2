@@ -13,51 +13,53 @@ struct ContentView: View {
     var body: some View {
         if vm.authenticated {
             // Show the view you want users to see when logged on
-            
-            VStack {
+            VStack(spacing: 20) {
                 Text("Welcome back **\(vm.username.lowercased())**!")
-                    .padding()
+                Text("Today is: **\(Date().formatted(.dateTime))**")
                 Button("Log out", action: vm.logOut)
                     .tint(.red)
                     .buttonStyle(.bordered)
             }
         } else {
             // Show a login screen
-            
             ZStack {
-                Circle()
-                    .foregroundColor(.indigo.opacity(0.90))
-                    .frame(height: 300)
-                    .offset(x: -100, y: 0)
-                Circle()
-                    .foregroundColor(.red.opacity(0.90))
-                    .frame(height: 300)
-                    .offset(x: 100, y: 0)
-                Circle()
-                    .foregroundColor(.blue.opacity(0.90))
-                    .frame(height: 400)
-                
-                VStack(spacing: 20) {
+                Image("sky")
+                    .resizable()
+                    .cornerRadius(20)
+                    .ignoresSafeArea()
+              
+                VStack(alignment: .leading, spacing: 20) {
                     Spacer()
-                    Text(vm.introMessage)
+                    Text("Log in")
                         .foregroundColor(.white)
+                        .font(.system(size: 40, weight: .medium, design: .rounded))
+                        .underline()
+
                     TextField("Username", text: $vm.username)
                         .textFieldStyle(.roundedBorder)
-                        .cornerRadius(10)
+                        .textInputAutocapitalization(.never)
                     SecureField("Password", text: $vm.password)
                         .textFieldStyle(.roundedBorder)
-                        .cornerRadius(10)
-                    Button("Log on", action: vm.authenticate)
-                        .buttonStyle(.bordered)
-                        .tint(.white)
-                    
+                        .textInputAutocapitalization(.never)
+                        .privacySensitive()
+                    HStack {
+                        Spacer()
+                        Button("Forgot password?", action: vm.logPressed)
+                            .tint(.red.opacity(0.80))
+                        Spacer()
+                        Button("Log on",role: .cancel, action: vm.authenticate)
+                            .buttonStyle(.bordered)
+                        Spacer()
+                    }
                     Spacer()
                 }
+                .alert("Access denied", isPresented: $vm.invalid) {
+                    Button("Dismiss", action: vm.logPressed)
+                }
+                .frame(width: 300)
                 .padding()
             }
-            .padding(5)
-            .transition(.move(edge: .bottom))
-            .ignoresSafeArea()
+            .transition(.offset(x: 0, y: 850))
         }
     }
 }

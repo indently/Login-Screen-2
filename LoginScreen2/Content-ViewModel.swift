@@ -13,19 +13,23 @@ extension ContentView {
         @AppStorage("AUTH_KEY") var authenticated = false {
             willSet { objectWillChange.send() }
         }
-        @Published var username = "codepalace2022" // Keep filled ONLY for debugging
-        @Published var password = "youtube123" // Keep filled ONLY for debugging
-        @Published var introMessage = "Log on to your account:"
+        @AppStorage("USER_KEY") var username = ""
+        // Keep filled ONLY for debugging
+        @Published var password = "" // Keep filled ONLY for debugging
+        @Published var invalid: Bool = false
+        
+        private var sampleUser = "username"
+        private var samplePassword = "password"
         
         init() {
             // Debugging
             print("Currently logged on: \(authenticated)")
+            print("Current user: \(username)")
         }
         
         func toggleAuthentication() {
             // Make sure that the password does not save.
             self.password = ""
-            self.introMessage = "Log on to your account:"
             
             withAnimation(.spring()) {
                 authenticated.toggle()
@@ -34,13 +38,13 @@ extension ContentView {
 
         func authenticate() {
             // Check for user
-            guard self.username.lowercased() == "codepalace2022" else {
-                self.introMessage = "Username not found..."
+            guard self.username.lowercased() == sampleUser else {
+                self.invalid = true
                 return }
             
             // Check for password
-            guard self.password.lowercased() == "youtube123" else {
-                self.introMessage = "Password is incorrect..."
+            guard self.password.lowercased() == samplePassword else {
+                self.invalid = true
                 return }
             
             toggleAuthentication()
@@ -48,6 +52,10 @@ extension ContentView {
         
         func logOut() {
             toggleAuthentication()
+        }
+        
+        func logPressed() {
+            print("Button pressed.")
         }
     }
 }
