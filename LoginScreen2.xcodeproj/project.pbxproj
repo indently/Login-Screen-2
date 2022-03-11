@@ -11,6 +11,7 @@
 		7A5023BB27DB840A002D261A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5023BA27DB840A002D261A /* ContentView.swift */; };
 		7A5023BD27DB840C002D261A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5023BC27DB840C002D261A /* Assets.xcassets */; };
 		7A5023C027DB840C002D261A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5023BF27DB840C002D261A /* Preview Assets.xcassets */; };
+		7A5023C727DB8430002D261A /* Content-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5023C627DB842F002D261A /* Content-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		7A5023BA27DB840A002D261A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A5023BC27DB840C002D261A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A5023BF27DB840C002D261A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A5023C627DB842F002D261A /* Content-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				7A5023B827DB840A002D261A /* LoginScreen2App.swift */,
 				7A5023BA27DB840A002D261A /* ContentView.swift */,
+				7A5023C627DB842F002D261A /* Content-ViewModel.swift */,
 				7A5023BC27DB840C002D261A /* Assets.xcassets */,
 				7A5023BE27DB840C002D261A /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				7A5023BB27DB840A002D261A /* ContentView.swift in Sources */,
 				7A5023B927DB840A002D261A /* LoginScreen2App.swift in Sources */,
+				7A5023C727DB8430002D261A /* Content-ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
